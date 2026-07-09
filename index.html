@@ -521,6 +521,21 @@ nav{
   opacity:0.18;
   border-radius:50%;
   filter:blur(40px);
+  animation:eduFloat 9s ease-in-out infinite;
+}
+.edu-main-card::after{
+  content:'';
+  position:absolute; bottom:-30%; left:-10%;
+  width:200px; height:200px;
+  background:#fff;
+  opacity:0.05;
+  border-radius:50%;
+  filter:blur(30px);
+  animation:eduFloat 11s ease-in-out infinite reverse;
+}
+@keyframes eduFloat{
+  0%, 100%{ transform:translate(0,0) scale(1); }
+  50%{ transform:translate(-18px,16px) scale(1.08); }
 }
 .edu-main-card .degree-icon{
   width:54px; height:54px;
@@ -725,6 +740,26 @@ nav{
 .bento-2 .feat-list-inline span{color:rgba(10,10,10,0.7);}
 .feat-list-inline i{color:var(--yellow); font-size:0.6rem;}
 .bento-2 .feat-list-inline i{color:var(--teal);}
+
+.proj-bullets{list-style:none; max-width:400px; margin:0 0 16px;}
+.proj-bullets li{
+  position:relative;
+  padding-left:20px;
+  margin-bottom:9px;
+  font-size:0.88rem;
+  line-height:1.55;
+}
+.proj-bullets li:last-child{margin-bottom:0;}
+.proj-bullets li::before{
+  content:'';
+  position:absolute; left:0; top:7px;
+  width:6px; height:6px;
+  border-radius:50%;
+  background:var(--yellow);
+}
+.bento-card.bento-1 .proj-bullets, .bento-card.bento-3 .proj-bullets{color:#D8E5E2;}
+.bento-card.bento-2 .proj-bullets{color:rgba(10,10,10,0.7);}
+.bento-2 .proj-bullets li::before{background:var(--teal);}
 
 /* ---------- ACHIEVEMENTS / CERTIFICATIONS (only place certs appear) ---------- */
 .achieve-grid{
@@ -991,7 +1026,7 @@ footer{
     </div>
     <div class="nav-cta">
       <a href="#contact" class="btn btn-outline">Contact Me</a>
-      <a href="https://drive.google.com/uc?export=download&id=1E9gF887dMLd5layF-Pfbm1LEdzljZGCK" download class="btn btn-primary" id="resumeBtnNav"><i class="fa-solid fa-download"></i> Resume</a>
+      <a href="https://drive.google.com/file/d/10XrG1OUwfdmbVkn3efU4m-2xh4_xmAv_/view?usp=drive_link" download class="btn btn-primary" id="resumeBtnNav"><i class="fa-solid fa-file-lines"></i> Resume</a>
       <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
@@ -1025,11 +1060,11 @@ footer{
       </div>
       <p class="lead">Final-year Computer Science Engineering student seeking opportunities to work, learn, and continuously improve. Passionate about Artificial Intelligence, Software Development, and Web Development — I build solutions that solve real-world problems.</p>
       <div class="hero-ctas">
-        <a href="https://drive.google.com/uc?export=download&id=1E9gF887dMLd5layF-Pfbm1LEdzljZGCK" download class="btn btn-yellow" id="resumeBtnHero"><i class="fa-solid fa-download"></i> Download Resume</a>
-        <a href="#contact" class="btn btn-outline">Contact Me</a>
+        <a href="https://drive.google.com/file/d/10XrG1OUwfdmbVkn3efU4m-2xh4_xmAv_/view?usp=drive_link" download class="btn btn-yellow" id="resumeBtnHero"><i class="fa-solid fa-file-lines"></i> Resume</a>
+        <a href="#contact" class="btn btn-outline"><i class="fa-solid fa-address-card"></i> Contact Me</a>
       </div>
       <div class="hero-socials">
-        <a href="https://www.linkedin.com/in/aadhisesha-d-611113310/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.linkedin.com/in/aadhisesha/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
         <a href="https://github.com/aadhisesha" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
         <a href="mailto:aadhisesha2006@gmail.com" class="social-icon" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
       </div>
@@ -1127,6 +1162,7 @@ footer{
       <h3>Bachelor of Engineering — Computer Science Engineering</h3>
       <div class="inst">College of Engineering Guindy (CEG), Anna University</div>
       <span class="duration"><i class="fa-regular fa-calendar"></i> 2023 – 2027</span>
+      <p style="margin-top:14px; color:#EAF3F1; font-size:0.95rem;">Current CGPA: 8.13</p>
     </div>
 
     <div class="edu-main-card reveal" style="margin-top:24px;">
@@ -1139,11 +1175,134 @@ footer{
   </div>
 </section>
 
+<!-- ============ INTERNSHIP ============ -->
+<section class="section-pad" id="internship">
+  <div class="container">
+    <div class="eyebrow">Internship</div>
+    <h2 class="section-title reveal">Summer Internship Experience</h2>
+    <p class="section-sub reveal">A department-focused academic systems project completed during my internship at Anna University.</p>
+
+    <div class="bento-grid" style="grid-template-columns:1fr; grid-template-rows:auto;">
+      <div class="bento-card bento-1 reveal" style="grid-column:1 / -1; min-height:auto;">
+        <div class="bento-dots"></div>
+        <i class="fa-solid fa-briefcase bento-bg-icon"></i>
+        <div class="bento-content">
+          <div class="bento-tech-row" style="margin-bottom:14px;">
+            <span class="bento-tag"><i class="fa-brands fa-react"></i> React</span>
+            <span class="bento-tag"><i class="fa-brands fa-node-js"></i> Node.js</span>
+            <span class="bento-tag"><i class="fa-solid fa-leaf"></i> MongoDB</span>
+            <span class="bento-tag"><i class="fa-solid fa-fire"></i> Firebase</span>
+          </div>
+          <h3>Summber intern 2025 at Department of Computer Science and Engg Anna University</h3>
+          <p>Department of Computer Science and Engineering, College of Engineering Guindy, Anna University</p>
+          <ul class="proj-bullets">
+            <li>Developed a Timetable AutoScheduler, a full-stack MERN application that generates conflict-free class schedules based on faculty availability, classroom allocation, and course constraints.</li>
+            <li>Implemented role-based access for HOD, administrators, and faculty, along with workload management, manual conflict detection, and secure authentication using Firebase with MongoDB as the backend database.</li>
+            <li>Built the application as a department-oriented solution to streamline timetable creation, reduce scheduling errors, and improve overall academic planning efficiency.</li>
+          </ul>
+          <a href="https://github.com/aadhisesha/Timetable-auto-scheduler.git" target="_blank" rel="noopener" class="bento-link"><i class="fa-brands fa-github"></i> View code</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS (bento style) ============ -->
+<section class="section-pad" id="projects">
+  <div class="container">
+    <div class="proj-intro">
+      <div>
+        <div class="eyebrow">Selected Work</div>
+        <h2 class="section-title reveal" style="margin-bottom:0;">My Latest Projects</h2>
+      </div>
+      <p class="section-sub reveal" style="margin-bottom:0;">A few things I've built that solve real, specific problems — not just demos.</p>
+    </div>
+
+    <div class="bento-grid">
+      <div class="bento-card bento-2 tall-pair reveal">
+        <div class="bento-dots"></div>
+        <i class="fa-solid fa-file-pen bento-bg-icon"></i>
+        <div class="bento-content">
+          <div class="bento-tech-row" style="margin-bottom:14px;">
+            <span class="bento-tag"><i class="fa-brands fa-python"></i> Python</span>
+            <span class="bento-tag"><i class="fa-solid fa-bolt"></i> FastAPI</span>
+            <span class="bento-tag"><i class="fa-brands fa-react"></i> React</span>
+            <span class="bento-tag"><i class="fa-solid fa-comment-dots"></i> NLP</span>
+          </div>
+          <h3>AI-Assisted Exam Evaluator</h3>
+          <ul class="proj-bullets">
+            <li>An intelligent web application that streamlines the assessment of descriptive answer sheets by combining AI and machine learning.</li>
+            <li>Uses OCR to extract text from scanned answer sheets, evaluates subjective responses using machine learning techniques, and assesses creative answers through AI-powered semantic analysis.</li>
+            <li>Features an auto-tuning correction mechanism that continuously refines evaluation accuracy based on faculty feedback and review.</li>
+            <li>Provides automated scoring, detailed feedback, and faculty review capabilities for faster, more accurate, and efficient evaluation.</li>
+          </ul>
+          <div class="feat-list-inline">
+            <span><i class="fa-solid fa-circle"></i> OCR integration</span>
+            <span><i class="fa-solid fa-circle"></i> NLP-based evaluation</span>
+            <span><i class="fa-solid fa-circle"></i> Automated scoring</span>
+          </div>
+          <a href="https://github.com/aadhisesha/AI-assisted-exam-evaluator" target="_blank" rel="noopener" class="bento-link"><i class="fa-brands fa-github"></i> View code</a>
+        </div>
+      </div>
+
+      <div class="bento-card bento-1 reveal">
+        <div class="bento-dots"></div>
+        <i class="fa-solid fa-gears bento-bg-icon"></i>
+        <div class="bento-content">
+          <div class="bento-tech-row" style="margin-bottom:14px;">
+            <span class="bento-tag"><i class="fa-brands fa-python"></i> Python</span>
+            <span class="bento-tag"><i class="fa-solid fa-chart-line"></i> Meta-Learning</span>
+            <span class="bento-tag"><i class="fa-solid fa-bullseye"></i> Bayesian Opt.</span>
+          </div>
+          <h3>Meta-HPO</h3>
+          <ul class="proj-bullets">
+            <li>An intelligent hyperparameter optimization framework that combines meta-learning with Bayesian optimization to identify high-performing configurations for ML classification models.</li>
+            <li>Leverages knowledge from previously optimized datasets to predict promising search spaces, significantly reducing optimization time while maintaining high model performance.</li>
+            <li>Supports multiple classification algorithms and provides interactive performance visualizations.</li>
+            <li>Enables faster, data-driven model selection through an intuitive web interface.</li>
+          </ul>
+          <div class="feat-list-inline">
+            <span><i class="fa-solid fa-circle"></i> Meta-learning search guidance</span>
+            <span><i class="fa-solid fa-circle"></i> Bayesian optimization</span>
+            <span><i class="fa-solid fa-circle"></i> Interactive visualizations</span>
+          </div>
+          <a href="https://github.com/aadhisesha/Meta-HPO.git" target="_blank" rel="noopener" class="bento-link"><i class="fa-brands fa-github"></i> View code</a>
+        </div>
+      </div>
+
+      <div class="bento-card bento-3 reveal">
+        <div class="bento-dots"></div>
+        <i class="fa-solid fa-location-dot bento-bg-icon"></i>
+        <div class="bento-content">
+          <div class="bento-tech-row" style="margin-bottom:14px;">
+            <span class="bento-tag"><i class="fa-brands fa-react"></i> React</span>
+            <span class="bento-tag"><i class="fa-brands fa-node-js"></i> Node.js</span>
+            <span class="bento-tag"><i class="fa-solid fa-leaf"></i> MongoDB</span>
+          </div>
+          <h3>Where Is My Friend</h3>
+          <ul class="proj-bullets">
+            <li>A real-time location-sharing web application that helps users connect and track the live locations of friends securely.</li>
+            <li>Enables users to create groups, share their location with selected contacts, and view friends' positions on an interactive map with real-time updates.</li>
+            <li>Built using the MERN stack, incorporating secure authentication and live location synchronization.</li>
+            <li>Offers an intuitive interface for a seamless and reliable way to stay connected and coordinate meetups.</li>
+          </ul>
+          <div class="feat-list-inline">
+            <span><i class="fa-solid fa-circle"></i> Live location sharing</span>
+            <span><i class="fa-solid fa-circle"></i> Real-time map updates</span>
+            <span><i class="fa-solid fa-circle"></i> Secure authentication</span>
+          </div>
+          <a href="https://github.com/aadhisesha/Find-My-Friend-Frontend.git" target="_blank" rel="noopener" class="bento-link"><i class="fa-brands fa-github"></i> View code</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ SKILLS ============ -->
 <section class="section-pad" id="skills">
   <div class="container">
     <div class="eyebrow">Skills</div>
-    <h2 class="section-title reveal">Tools I reach for,<br>and how I use them.</h2>
+    <h2 class="section-title reveal">My skillset,<br>built across code and systems.</h2>
     <p class="section-sub reveal">A blend of core programming, full-stack web development, applied AI/ML, and the soft skills that hold a project together.</p>
 
     <div class="skills-subgroup">
@@ -1153,6 +1312,7 @@ footer{
         <div class="skill-chip reveal"><div class="chip-ic ic-python"><i class="fa-brands fa-python"></i></div><div class="chip-label">Python</div></div>
         <div class="skill-chip reveal"><div class="chip-ic ic-cpp"><i class="fa-solid fa-code"></i></div><div class="chip-label">C++</div></div>
         <div class="skill-chip reveal"><div class="chip-ic ic-c"><i class="fa-solid fa-c"></i></div><div class="chip-label">C</div></div>
+        <div class="skill-chip reveal"><div class="chip-ic ic-mern"><i class="fa-solid fa-database"></i></div><div class="chip-label">SQL</div></div>
       </div>
     </div>
 
@@ -1165,6 +1325,7 @@ footer{
         <div class="skill-chip reveal"><div class="chip-ic ic-mongo"><i class="fa-solid fa-leaf"></i></div><div class="chip-label">MongoDB</div></div>
         <div class="skill-chip reveal"><div class="chip-ic ic-c" style="background:#E34F26;"><i class="fa-brands fa-html5"></i></div><div class="chip-label">HTML</div></div>
         <div class="skill-chip reveal"><div class="chip-ic ic-c" style="background:#1572B6;"><i class="fa-brands fa-css3-alt"></i></div><div class="chip-label">CSS</div></div>
+        <div class="skill-chip reveal"><div class="chip-ic ic-mern"><i class="fa-solid fa-network-wired"></i></div><div class="chip-label">Computer Networks</div></div>
       </div>
     </div>
 
@@ -1222,82 +1383,6 @@ footer{
         <div class="s-ic"><i class="fa-solid fa-microchip"></i></div>
         <h3>AI &amp; Machine Learning Solutions</h3>
         <p>Building intelligent applications powered by machine learning and data-driven approaches.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PROJECTS (bento style) ============ -->
-<section class="section-pad" id="projects">
-  <div class="container">
-    <div class="proj-intro">
-      <div>
-        <div class="eyebrow">Selected Work</div>
-        <h2 class="section-title reveal" style="margin-bottom:0;">My Latest Projects</h2>
-      </div>
-      <p class="section-sub reveal" style="margin-bottom:0;">A few things I've built that solve real, specific problems — not just demos.</p>
-    </div>
-
-    <div class="bento-grid">
-      <div class="bento-card bento-1 reveal">
-        <div class="bento-dots"></div>
-        <i class="fa-solid fa-calendar-days bento-bg-icon"></i>
-        <div class="bento-content">
-          <div class="bento-tech-row" style="margin-bottom:14px;">
-            <span class="bento-tag"><i class="fa-brands fa-react"></i> React</span>
-            <span class="bento-tag"><i class="fa-brands fa-node-js"></i> Node.js</span>
-            <span class="bento-tag"><i class="fa-solid fa-leaf"></i> MongoDB</span>
-          </div>
-          <h3>Timetable Auto Scheduler</h3>
-          <p>Generates conflict-free academic timetables with role-based access control for efficient institutional scheduling.</p>
-          <div class="feat-list-inline">
-            <span><i class="fa-solid fa-circle"></i> Conflict detection</span>
-            <span><i class="fa-solid fa-circle"></i> Role-based access</span>
-            <span><i class="fa-solid fa-circle"></i> Auto-generation</span>
-          </div>
-          <a href="https://github.com/aadhisesha/Timetable-auto-scheduler" target="_blank" rel="noopener" class="bento-link"><i class="fa-brands fa-github"></i> View code</a>
-        </div>
-      </div>
-
-      <div class="bento-card bento-2 tall-pair reveal">
-        <div class="bento-dots"></div>
-        <i class="fa-solid fa-file-pen bento-bg-icon"></i>
-        <div class="bento-content">
-          <div class="bento-tech-row" style="margin-bottom:14px;">
-            <span class="bento-tag"><i class="fa-brands fa-python"></i> Python</span>
-            <span class="bento-tag"><i class="fa-solid fa-bolt"></i> FastAPI</span>
-            <span class="bento-tag"><i class="fa-brands fa-react"></i> React</span>
-            <span class="bento-tag"><i class="fa-solid fa-comment-dots"></i> NLP</span>
-          </div>
-          <h3>AI-Assisted Exam Evaluator</h3>
-          <p>An intelligent evaluation platform that assesses subjective answers using OCR and machine learning techniques.</p>
-          <div class="feat-list-inline">
-            <span><i class="fa-solid fa-circle"></i> OCR integration</span>
-            <span><i class="fa-solid fa-circle"></i> NLP-based evaluation</span>
-            <span><i class="fa-solid fa-circle"></i> Automated scoring</span>
-          </div>
-          <a href="https://github.com/aadhisesha/AI-assisted-exam-evaluator" target="_blank" rel="noopener" class="bento-link"><i class="fa-brands fa-github"></i> View code</a>
-        </div>
-      </div>
-
-      <div class="bento-card bento-3 reveal">
-        <div class="bento-dots"></div>
-        <i class="fa-solid fa-location-dot bento-bg-icon"></i>
-        <div class="bento-content">
-          <div class="bento-tech-row" style="margin-bottom:14px;">
-            <span class="bento-tag"><i class="fa-brands fa-react"></i> React</span>
-            <span class="bento-tag"><i class="fa-brands fa-node-js"></i> Node.js</span>
-            <span class="bento-tag"><i class="fa-solid fa-leaf"></i> MongoDB</span>
-          </div>
-          <h3>Where Is My Friend</h3>
-          <p>A real-time location-sharing platform that helps friends coordinate meetups, travel plans, and social events.</p>
-          <div class="feat-list-inline">
-            <span><i class="fa-solid fa-circle"></i> Live location sharing</span>
-            <span><i class="fa-solid fa-circle"></i> Real-time updates</span>
-            <span><i class="fa-solid fa-circle"></i> Friend coordination</span>
-          </div>
-          <span class="bento-link" style="opacity:0.65; cursor:default;"><i class="fa-solid fa-clock"></i> Repo coming soon</span>
-        </div>
       </div>
     </div>
   </div>
@@ -1373,7 +1458,7 @@ footer{
           <span class="ci-ic"><i class="fa-brands fa-linkedin-in"></i></span>
           <div class="ci-text">
             <div class="ci-label">LinkedIn</div>
-            <a href="https://www.linkedin.com/in/aadhisesha-d-611113310/" target="_blank" rel="noopener">aadhisesha-d</a>
+            <a href="https://www.linkedin.com/in/aadhisesha/" target="_blank" rel="noopener">aadhisesha</a>
           </div>
         </div>
         <div class="cinfo-row">
@@ -1385,7 +1470,7 @@ footer{
         </div>
 
         <div class="contact-socials">
-          <a href="https://www.linkedin.com/in/aadhisesha-d-611113310/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.linkedin.com/in/aadhisesha/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
           <a href="https://github.com/aadhisesha" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
           <a href="mailto:aadhisesha2006@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
           <a href="tel:+919345516909" aria-label="Call"><i class="fa-solid fa-phone"></i></a>
@@ -1432,7 +1517,7 @@ footer{
         <a href="#home" class="logo">AADHISESHA<span class="dot">.</span></a>
         <p>Final-year CSE student building at the intersection of AI and full-stack development. Always learning, always shipping.</p>
         <div class="footer-social" style="margin-top:18px;">
-          <a href="https://www.linkedin.com/in/aadhisesha-d-611113310/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.linkedin.com/in/aadhisesha/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
           <a href="https://github.com/aadhisesha" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
           <a href="mailto:aadhisesha2006@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
         </div>
